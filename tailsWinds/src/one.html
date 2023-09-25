@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tailwinds</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="output.css" />
+  
+  </head>
+  <body>
+    <header
+      class="bg-white  border border-b-2 h-20  "
+    >
+    <div class="w-[90%] m-auto mt-4 flex justify-between items-center text-2xl ">
+      <div class="lg:hidden"><i class="fa-solid fa-bars"></i></div>
+      <div class="flex justify-around items-center">
+        <img
+          class="w-18 h-11"
+          src="https://cdn.holidaykeepers.com/wp-content/uploads/2021/10/Holidaykeepers_black.png"
+          height="50"
+          alt="holidaykeepers logo"
+        />
+        <ul class="px-5 hidden lg:flex">
+          <li id="dropdown" class="px-2 text-sm font-medium">
+            <span><a href="#">Explore</a>
+              <ul id="dropdownMenu" class="hidden absolute bg-white border-2 py-4 px-2 rounded-md mt-4 -translate-x-4">
+                <li>Experiences</li>
+                <li>Places to stay</li>
+              </ul>
+            </span>
+            <span class="px-1"><i class="fa-solid fa-caret-down"></i></span>
+          </li>
+          <li class="px-2 text-sm font-medium">
+            <span><a href="#">United State</a></span>
+            <span class="px-1"><i class="fa-solid fa-caret-down"></i></span>
+          </li>
+          <li class="px-2 text-sm font-medium">
+            <span><a href="#">More</a></span>
+            <span class="px-1"><i class="fa-solid fa-caret-down"></i></span>
+          </li>
+          <li class="px-2 text-sm font-medium cursor-pointer">Blog</li>
+          <li class="px-2 text-sm font-medium cursor-pointer">About</li>
+          <li class="px-2 text-sm font-medium cursor-pointer">Contact</li>
+        </ul>
+      </div>
+
+      <!-- <img class="px-5" src="svgviewer-png-output (1).png" alt=".." /> -->
+      <div class="bg-pink-600 rounded-[50%] text-center cursor-pointer">
+        <i class="fa-solid fa-user fa-2xs w-8" style="color: white"></i>
+      </div>
+      </div>
+    </header>
+
+
+    
+    <section class="w-[80%] m-auto flex justify-center p-10 gap-x-4">
+      <span
+        class="h-5 w-5 bg-pink-600 border-pink-600 border-4 p-5 flex justify-center items-center rounded-[50%] text-white font-semibold"
+        >1</span
+      >
+      <hr class="border-dashed bg-black border-2 w-[230px] my-auto" />
+
+      <span
+        class="h-5 w-5 border-4 border-pink-600 rounded-[50%] p-5 flex justify-center items-center font-semibold"
+        >2</span
+      >
+      <hr class="border-dashed bg-black border-2 w-[230px] my-auto" />
+      <span
+        class="h-5 w-5 border-pink-600 border-4 p-5 flex justify-center items-center rounded-[50%] font-semibold"
+        >3</span
+      >
+    </section>
+
+    <!-- second section  -->
+    <section
+      class="sm:w-[90%]  lg:w-[70%] mx-auto my-4 flex py-6 gap-x-10 md:border-b-2  border-black"
+    >
+
+    <!-- left part -->
+      <div class="px-5">
+        <div>
+          <h1 class="text-5xl font-semibold py-5">Begin your booking</h1>
+          <p class="py-4 text-xl">
+            Thank you for choosing HolidayKeepers. Please enter accurate details
+            to help us host a perfect holiday experience.
+          </p>
+        </div>
+        <form class="">
+          <div class="py-5 flex flex-col gap-4 lg:flex-row  lg:justify-between lg:gap-8">
+            <!-- <input
+              class="py-4 px-4 w-[50%] text-xl rounded-md border-2 border-slate-400"
+              type="text"
+              placeholder="First Name"
+            /> -->
+            <div class="relative lg:w-1/2">
+              <input
+                type="text"
+                id="floating_outlined"
+                class="w-full h-[70px] border-2 border-slate-400 block px-2.5 pb-2.5 pt-4 text-sm text-gray-900 bg-transparent rounded-lg border-1 appearance-none dark:text-white dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+              />
+              <label
+                for="floating_outlined"
+                class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+                >First Name</label
+              >
+            </div>
+            <!-- <input
+              class="py-4 px-4 w-[50%] text-xl rounded-md border-2 border-slate-400"
+              type="text"
+              placeholder="Last Name"
+            /> -->
+            <div class="relative lg:w-1/2">
+              <input
+                type="text"
+                id="floating_outlined"
+                class="w-full h-[70px] border-2 border-slate-400 block px-2.5 pb-2.5 pt-4 text-sm text-gray-900 bg-transparent rounded-lg border-1 appearance-none dark:text-white dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+              />
+              <label
+                for="floating_outlined"
+                class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+                >Last Name</label
+              >
+            </div>
+          </div>
+          <div class="py-5 flex flex-col gap-4 -mt-5 lg:flex-row lg:justify-between lg:gap-8">
+            <!-- <input
+              class="py-4 px-4 w-[50%] text-xl rounded-md border-2 border-slate-400"
+              type="text"
+              placeholder="Email"
+            /> -->
+            <div class="relative lg:w-1/2">
+              <input
+                type="text"
+                id="floating_outlined"
+                class="w-full h-[70px] border-2 border-slate-400 block px-2.5 pb-2.5 pt-4 text-sm text-gray-900 bg-transparent rounded-lg border-1 appearance-none dark:text-white dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+              />
+              <label
+                for="floating_outlined"
+                class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+                >Email</label
+              >
+            </div>
+            <select
+              class="py-4 px-4  text-xl rounded-md border-2 border-slate-400 lg:w-1/2"
+            >
+              <option>India</option>
+              <option>USA</option>
+              <option>Australia</option>
+              <option>England</option>
+              <option>Scotland</option>
+              <option>Ireland</option>
+              <option>Poland</option>
+              <option>Finland</option>
+            </select>
+            <!-- <input class="py-4 px-4 w-[50%] text-xl rounded-md border-2 border-slate-400" type="text"  placeholder="Country"> -->
+            <!-- <div class="relative w-1/2 ">
+              <input
+                type="text"
+                id="floating_outlined"
+                class="w-full h-full border-2 border-slate-400 block px-2.5 pb-2.5 pt-4 text-sm text-gray-900 bg-transparent rounded-lg border-1 appearance-none dark:text-white dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+              />
+              <label
+                for="floating_outlined"
+                class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+                >Email</label
+              >
+            </div> -->
+          </div>
+          <button
+            class="bg-pink-600 text-white font-semibold py-4 text-xl   w-[100%] rounded-md md:w-auto  md:px-12 md:py-2 md:float-right "
+          >
+            Next
+          </button>
+        </form>
+      </div>
+
+      <!-- right part -->
+      <div class="hidden lg:block">
+        <div class="w-[320px] mx-auto">
+          <div class="border-b-2 border-slate-200 pb-4">
+            <img
+              class="mb-4 rounded-lg"
+              src="https://www.holidaykeepers.com/wp-content/uploads/2022/07/003-IMG_0521-1118x900-1.webp"
+              alt=".."
+            />
+            <p class="text-[20px] font-semibold w-[330px]">
+              174 Acre Luxury Mansion Rental with Private Pool in Poconos - PA
+              (1700)
+            </p>
+          </div>
+
+          <div
+            class="flex justify-between w-[300px] border-b-2 border-slate-200 py-4"
+          >
+            <div class="flex flex-col">
+              <h2 class="text-pink-600 text-xl font-semibold">Checkin</h2>
+              <span class="text-[1rem]">Nov 15,2023</span>
+              <span class="text-[1rem]">4:00 PM</span>
+            </div>
+            <div class="flex flex-col">
+              <h3 class="text-pink-600 text-xl font-semibold">Checkout</h3>
+              <span class="text-[1rem]">Nov 16,2023</span>
+              <span class="text-[1rem]">11:00 AM</span>
+            </div>
+          </div>
+
+          <div class="w-[300px] flex flex-col border-b-2 border-slate-200 py-4">
+            <h3 class="text-pink-600 text-xl font-semibold">Guests</h3>
+            <span class="text-[1rem]">2 guests</span>
+          </div>
+
+          <div class="border-b-2 border-slate-200 py-4">
+            <div class="w-[300px] flex justify-between my-4">
+              <span>Rent ( 1 Nights )</span>
+              <span>₹187132</span>
+            </div>
+            <div class="w-[300px] flex justify-between my-4">
+              <span class="w-[210px] leading-5"
+                >Refundable Security Desposit</span
+              >
+              <span>₹83170</span>
+            </div>
+
+            <div class="w-[300px] flex justify-between my-4">
+              <span class="w-[210px] leading-5">Fee</span>
+              <span>₹103963</span>
+            </div>
+
+            <div class="w-[300px] flex justify-between">
+              <span class="w-[210px] leading-5">Tax</span>
+              <span>₹26199</span>
+            </div>
+          </div>
+
+          <div
+            class="w-[300px] flex justify-between text-pink-600 font-semibold"
+          >
+            <span>Final Amount</span>
+            <span>₹400464</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class=" hidden  lg:w-[70%] md:w-[90%] md:mx-auto md:h-40 md:flex justify-evenly">
+      <div class="w-[25%] text-[20px] flex flex-col leading-6">
+        <span>© Copyright © 2022</span>
+        <span>Holidaykeepers</span>
+      </div>
+      <div class="w-[50%] text-[20px] flex justify-center">
+        <span>we accept</span>
+        <img
+          class="h-6"
+          src="https://www.holidaykeepers.com/wp-content/uploads/2022/03/cards-01.png"
+          width="300"
+          alt="card"
+          style="margin-top: 2px"
+        />
+      </div>
+      <div class="w-[25%] flex justify-between px-2">
+        <span>Sitemap</span>
+        <span>Terms</span>
+        <span>Privacy</span>
+      </div>
+    </footer>
+
+
+    <script>
+      // let explore = document.getElementById("dropdown");
+      // let exploreSubmenu = document.getElementById("dropdownMenu");
+
+      // explore.addEventListener("mouseover",()=>{
+      //   // explore.style.backgroundColor = "cyan";
+      //   exploreSubmenu.style.display = "block";
+        
+      // })
+      
+      // explore.addEventListener("mouseout",()=>{
+      //   // explore.style.backgroundColor = "transparent"
+      //   exploreSubmenu.style.display = "hidden";
+      //   console.log("hey")
+      // })
+    </script>
+
+  </body>
+</html>

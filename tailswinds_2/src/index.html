@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project - 2 by tailwinds</title>
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="">
+
+    <header class="bg-black h-[70px] w-full flex items-center justify-between">
+        
+         <img
+          class="w-18 h-10 mx-4"
+          src="https://cdn.holidaykeepers.com/wp-content/uploads/2021/10/Holidaykeepers_black.png"
+          height="50"
+          alt="holidaykeepers logo"
+        />
+        
+    </header>
+
+
+    <!-- side bar -->
+    <main class="flex">
+      <div
+        class="w-[14%] border-r-2 border-slate-300    text-[16px]"
+      >
+        <div class="py-5 px-3 hover:bg-slate-200">
+          <span><i class="fa-solid fa-house"></i></span>
+          <span>Dashboard</span>
+        </div>
+        <div onclick="clickFun" class="py-5 px-3 hover:bg-slate-200">
+          <span><i class="fa-solid fa-bag-shopping"></i></span>
+          <span>Checkout</span>
+        </div>
+        <div class="py-5 px-3 hover:bg-slate-200">
+          <span><i class="fa-solid fa-circle-check"></i></span>
+          <span>Orders</span>
+        </div>
+        <div class="py-5 px-3 hover:bg-slate-200">
+          <span><i class="fa-solid fa-building"></i></span>
+          <span>Other platforms</span>
+        </div>
+        <div class="py-5 px-3 hover:bg-slate-200">
+          <span><i class="fa-solid fa-arrow-trend-up"></i></span>
+          <span>Reports</span>
+        </div>
+        <div class="py-5 px-3 hover:bg-slate-200">
+          <span><i class="fa-solid fa-user"></i></span>
+          <span>Users/Hosts</span>
+        </div>
+        <div class="py-5 px-3 hover:bg-slate-200">
+          <span><i class="fa-solid fa-circle-dollar-to-slot"></i></span>
+          <span>Payments</span>
+        </div>
+        <div class="py-5 px-3 hover:bg-slate-200">
+          <span><i class="fa-solid fa-bell"></i></span>
+          <span>Payments Notification</span>
+        </div>
+        <div class="py-5 px-3 hover:bg-slate-200">
+          <span><i class="fa-solid fa-globe"></i></span>
+          <span>Geo & Region</span>
+        </div>
+        <div class="py-5 px-3 hover:bg-slate-200">
+          <span><i class="fa-solid fa-house-chimney"></i></span>
+          <span>Taxonomy</span>
+        </div>
+        <div class="py-5 px-3 hover:bg-slate-200">
+          <span><i class="fa-solid fa-sliders"></i></span>
+          <span>System Variable</span>
+        </div>
+        <div class="py-5 px-3 hover:bg-slate-200">
+          <span><i class="fa-solid fa-layer-group"></i></span>
+          <span>Extra</span>
+        </div>
+      </div>
+
+      <div class="w-[90%] mx-4">
+        <!-- checkout content -->
+        
+          <div class="flex justify-between items-center py-2">
+            <h2 class="text-red-500 text-2xl font-semibold">All Checkouts</h2>
+            <button class="bg-blue-500 py-2 px-4 text-white font-semibold rounded">
+              Add Checkout
+            </button>
+          </div>
+
+          <div class="flex gap-10 bg-slate-300 py-2 my-2 ">
+            <button class="bg-red-500 py-2 px-3 rounded text-white font-semibold ms-2">New</button>
+            <button class="bg-white py-2 px-3 rounded text-red-500 font-semibold">Completed</button>
+            <button class="bg-white py-2 px-3 rounded text-red-500 font-semibold">Empty</button>
+          </div>
+
+          <div class="bg-slate-300 py-2 flex items-center gap-x-4">
+            <select class="py-2 px-4 ms-2 bg-white rounded-lg">
+                <option>Checkout Id</option>
+                <option>Checkout Id</option>
+                <option>Checkout Id</option>
+            </select>
+            <input class="py-2 px-12 rounded" type="search" placeholder="seach anything in this table" />
+            <button class="border border-white  py-2 px-4 rounded-md">Filter</button>
+            <button class="border border-white  py-2 px-4 rounded-md">Remove Filter</button>
+          </div>
+
+        
+        
+          <table class="block">
+            <thead class="bg-slate-600  font-semibold text-white block">
+                <tr class=" flex">
+                    <th class="w-[10%] block">Checkout Id</th>
+                    <th class="w-[10%] block">Order Id</th>
+                    <td class="w-[10%] block">Addons</th>
+                    <th class="w-[20%] block">Info</th>
+                    <th class="w-[10%] block">Checkout Status</th>
+                    <th class="w-[10%] block">Payment Status</th>
+                    <th class="w-[15%] block">Checkin</th>
+                    <th class="w-[15%] block">Checkout</th>
+                </tr>
+            </thead>
+            <tbody class="h-96  overflow-y-scroll block">
+                <tr class="h-20 flex items-center text-center odd:bg-slate-50 even:bg-slate-200">
+                    <td class=" w-[10%]">2035</td>
+                    <td class=" w-[10%]"></td>
+                    <td class=" w-[10%]"></td>
+                    <td class=" w-[20%] flex flex-col">
+                        <span>abc</span>
+                        <span>abc@gmail.com</span>
+                        <span>28932389</span>
+                    </td>
+
+                    <td class="w-[10%]"><mark class=" bg-orange-300 text-orange-600 py-1 border rounded-md px-2">pending</mark></td>
+
+                    <td class="w-[10%]"><mark class=" bg-orange-300 text-orange-600 py-1 border rounded-md px-2">pending</mark></td>
+
+                    <td class="w-[15%]">Nov 11,2023</td>
+                    <td class="w-[15%]">Nov 12,2023</td>
+                </tr>
+                <tr class="h-20 flex items-center  text-center odd:bg-slate-50 even:bg-slate-300">
+                    <td class="text-blue-600 w-[10%]">2035</td>
+                    <td class="w-[10%]"></td>
+                    <td class="w-[10%]"></td>
+                    <td class="w-[20%] flex flex-col">
+                        <span>abc</span>
+                        <span>abc@gmail.com</span>
+                        <span>28932389</span>
+                    </td>
+                    <td class="w-[10%]"><mark class="bg-orange-300 text-orange-600 py-1 border rounded-md px-2">pending</mark></td>
+                    <td class="w-[10%]"><mark class="bg-orange-300 text-orange-600 py-1 border rounded-md px-2">pending</mark></td>
+                    <td class="w-[15%]">Nov 11,2023</td>
+                    <td class="w-[15%]">Nov 12,2023</td>
+                </tr>
+                <tr class="h-20 flex items-center text-center odd:bg-slate-50 even:bg-slate-300">
+                    <td class="w-[10%] text-blue-600">2035</td>
+                    <td class="w-[10%]"></td>
+                    <td class="w-[10%]"></td>
+                    <td class="w-[20%] flex flex-col">
+                        <span>abc</span>
+                        <span>abc@gmail.com</span>
+                        <span>28932389</span>
+                    </td>
+                    <td class="w-[10%]"><mark class="bg-orange-300 text-orange-600 py-1 border rounded-md px-2">pending</mark></td>
+                    <td class="w-[10%]"><mark class="bg-orange-300 text-orange-600 py-1 border rounded-md px-2">pending</mark></td>
+                    <td class="w-[15%]">Nov 11,2023</td>
+                    <td class="w-[15%]">Nov 12,2023</td>
+                </tr>
+                <tr class="h-20 flex items-center text-center odd:bg-slate-50 even:bg-slate-300">
+                    <td class="w-[10%] text-blue-600">2035</td>
+                    <td class="w-[10%]"></td>
+                    <td class="w-[10%]"></td>
+                    <td class="w-[20%] flex flex-col">
+                        <span>abc</span>
+                        <span>abc@gmail.com</span>
+                        <span>28932389</span>
+                    </td>
+                    <td class="w-[10%]"><mark class="bg-orange-300 text-orange-600 py-1 border rounded-md px-2">pending</mark></td>
+                    <td class="w-[10%]"><mark class="bg-orange-300 text-orange-600 py-1 border rounded-md px-2">pending</mark></td>
+                    <td class="w-[15%]">Nov 11,2023</td>
+                    <td class="w-[15%]">Nov 12,2023</td>
+                </tr>
+                <tr class="h-20 flex items-center text-center odd:bg-slate-50 even:bg-slate-300">
+                    <td class="w-[10%] text-blue-600">2035</td>
+                    <td class="w-[10%]"></td>
+                    <td class="w-[10%]"></td>
+                    <td class="w-[20%] flex flex-col">
+                        <span>abc</span>
+                        <span>abc@gmail.com</span>
+                        <span>28932389</span>
+                    </td>
+                    <td class="w-[10%]"><mark class="bg-orange-300 text-orange-600 py-1 border rounded-md px-2">pending</mark></td>
+                    <td class="w-[10%]"><mark class="bg-orange-300 text-orange-600 py-1 border rounded-md px-2">pending</mark></td>
+                    <td class="w-[15%]">Nov 11,2023</td>
+                    <td class="w-[15%]">Nov 12,2023</td>
+                </tr>
+                <tr class="h-20 flex items-center text-center odd:bg-slate-50 even:bg-slate-300">
+                    <td class="w-[10%] text-blue-600">2035</td>
+                    <td class="w-[10%]"></td>
+                    <td class="w-[10%]"></td>
+                    <td class="w-[20%] flex flex-col">
+                        <span>abc</span>
+                        <span>abc@gmail.com</span>
+                        <span>28932389</span>
+                    </td>
+                    <td class="w-[10%]"><mark class="bg-orange-300 text-orange-600 py-1 border rounded-md px-2">pending</mark></td>
+                    <td class="w-[10%]"><mark class="bg-orange-300 text-orange-600 py-1 border rounded-md px-2">pending</mark></td>
+                    <td class="w-[15%]">Nov 11,2023</td>
+                    <td class="w-[15%]">Nov 12,2023</td>
+                </tr>
+            </tbody>
+          </table>
+
+          
+      </div>
+    </main>
+
+
+    <script>
+
+           
+
+    </script>
+
+  </body>
+</html>

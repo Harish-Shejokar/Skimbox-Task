@@ -130,5 +130,84 @@ const reduceResult = arr.reduce((sum, curr) => sum + curr);
 //   { id: "pete", name: "Pete Peterson", age: 31 },
 // ];
 
-let usersById = groupById(users);
+// let usersById = groupById(users);
 // console.log(usersById)
+
+
+// zeros avoid trick 
+// console.log(1e3 === 1000)
+// console.log(1e-3 === 1 / 1000);
+
+
+let skdw = [238, 238, 23848, 832, 283, "skdjf83", "sjd", 2];
+
+
+//slice usage
+// console.log(skdw.slice(2, 5));
+
+
+// nested destructuring
+let options = {
+  size: {
+    width: 100,
+    height: 200,
+  },
+  items: ["Cake", "Donut"],
+  extra: true,
+};
+
+let { size: { width }, items: [elem1] } = options;
+// console.log(width, elem1);
+
+
+
+// slice , substring, substr
+
+let abcd = " _ thequickbrownfox   ";
+
+const temp = abcd.substring(0, 3);
+// console.log(temp);
+
+
+// trim - it removes beginning  and ending spaces from string 
+
+const trim = abcd.trim();
+// console.log(trim);
+
+
+
+// for of loop
+let recipeMap = new Map([
+  ["cucumber", 500],
+  ["tomatoes", 350],
+  ["onion", 50],
+]);
+
+// for (let elem of recipeMap.values()) console.log(elem);
+
+
+
+let newUser = `{
+  "meetups": [
+    {"title":"Conference","date":"2017-11-30T12:00:00.000Z"},
+    {"title":"Birthday","date":"2017-04-18T12:00:00.000Z"}
+  ]
+}`;
+
+// console.log(JSON.parse(newUser));
+
+
+//call, apply and bind -for creating explicit binding
+let Obj = {
+  name: "abc",
+  age:"2398"
+}
+
+function printDetails(country) {
+  console.log(this.name,this.age, country);
+}
+
+
+// printDetails.call(Obj, "India");
+// printDetails.apply(Obj, ["Mexico"]);
+

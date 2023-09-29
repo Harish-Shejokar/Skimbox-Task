@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom stuf</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: lightseagreen;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #cont {
+        height: 500px;
+        width: 400px;
+        margin-top: 4rem;
+        background-color: aliceblue;
+        border-radius: 20px;
+        position: relative;
+      }
+      #cont img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* object-position: top; */
+      }
+
+      #cont i {
+        color: rgb(238, 58, 58);
+        font-size: 80px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cont">
+      <img
+        src="https://img.freepik.com/free-photo/front-close-view-dry-red-wine-glass-bottle-snack-conifer-cone-gray-background_140725-140039.jpg?size=626&ext=jpg&ga=GA1.2.231544207.1693670765&semt=sph"
+        alt=""
+      />
+      <i class="ri-heart-fill"></i>
+    </div>
+
+    <script>
+      let cont = document.querySelector("#cont");
+      let heart = document.querySelector("i");
+
+      cont.addEventListener("dblclick", () => {
+        heart.style.transform = "translate(-50%,-50%) scale(1)";
+        heart.style.transition = "all ease 0.5s";
+        heart.style.opacity = "0.9";
+
+        setTimeout(() => {
+          heart.style.opacity = "0";
+        }, 1000);
+
+        setTimeout(() => {
+          heart.style.transform = "translate(-50%,-50%) scale(0)";
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>

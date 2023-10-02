@@ -211,3 +211,19 @@ function printDetails(country) {
 // printDetails.call(Obj, "India");
 // printDetails.apply(Obj, ["Mexico"]);
 
+
+//GENERATOR FUNCITON
+
+function* gentFun() {
+  yield "First";
+  yield "second";
+  yield "third";
+}
+
+let gen = gentFun();
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+
+

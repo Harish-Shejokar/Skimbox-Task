@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(55, 57, 58);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+
+.container {
+  width: 450px;
+  height: 700px;
+  border: 2px solid black;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.screen {
+  height: 150px;
+  width: 100%;
+  background-color: aqua;
+}
+
+.screen input {
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-size: 70px;
+  border: none;
+  background-color: black;
+  /* text-align: right; */
+  /* direction: rtl; */
+}
+
+
+
+.main {
+  /* width: 100%; */
+  height: 580px;
+  background-color: black;
+  padding: 10px 2px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.row1 {
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.row1 button {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  font-size: 50px;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: slategray;
+  border: none;
+}
+.row1 button:active {
+  background-color: rgb(177, 194, 210);
+}
+.row {
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+}
+
+.row button {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  font-size: 50px;
+  font-weight: 400;
+  border-radius: 50%;
+  background-color: rgb(55, 56, 58);
+  color: white;
+  border: none;
+}
+.row button:active {
+    background-color: white;
+  color: black;
+}
+
+
+#divide{
+  background-color: orange;
+  color: white;
+}
+#divide:active {
+  background-color: red;
+  color: black;
+}
+#multiply {
+  background-color: orange;
+  color: white;
+}
+#multiply:active { background-color: red;
+  color: black;
+}
+#minus {
+  background-color: orange;
+  color: white;
+}
+#minus:active {
+   background-color: red;
+  color: black;
+}
+#plus {
+  background-color: orange;
+  color: white;
+}
+#plus:active {
+  background-color: red;
+  color: black;
+}
+#equalTo {
+  background-color: orange;
+  color: white;
+}
+#equalTo:active {
+  background-color: red;
+  color: black;
+}
+#zero{
+    width: 200px;
+    border-radius: 70px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dragNdrop</title>
+    <style>
+      body {
+        background-color: rgb(14, 200, 200);
+      }
+      .main {
+        height: 250px;
+        /* border: 2px solid black; */
+        padding: 10px;
+        display: flex;
+        column-gap: 7px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        cursor: pointer;
+        /* background-color: aliceblue; */
+      }
+      .card {
+        background-color: red;
+        height: 250px;
+        width: 400px;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        font-family: sans-serif;
+        text-align: center;
+        /* pointer-events: none; */
+        /* cursor: pointer; */
+        /* position: relative; */
+      }
+
+      #outerCont {
+        /* border: 4px solid maroon; */
+        width: 80%;
+        height: 250px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        /* padding: 10px; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <p  style="text-align: center;font-size: 50px;"></p> -->
+    <div id="outerCont">
+      <div class="main" id="inner">
+        <div class="card">Swipe</div>
+        <div class="card">Drag</div>
+        <div class="card">Responsive</div>
+        <div class="card">CSS3</div>
+        <div class="card">Fast</div>
+        <div class="card">Easy</div>
+        <div class="card">Free</div>
+        <div class="card">Upgradable</div>
+        <div class="card">Tons of options</div>
+        <div class="card">Infinity</div>
+      </div>
+    </div>
+
+    <!-- <div
+      id="slider"
+      style="background-color: aliceblue;width: 80%; position: relative; height: 90px; "
+    >
+      <div
+        id="item"
+        style="width: 25px; height: 90px; background-color: blue; position: absolute;cursor: pointer;"
+      ></div>
+      
+    </div> -->
+
+    <!-- <div style="width: 800px; height: 700px;">
+    <img
+      id="ball"
+      width="100px"
+      src="https://upload.wikimedia.org/wikipedia/en/e/ec/Soccer_ball.svg"
+      alt=""
+    />
+    </div> -->
+
+    <script src="main.js"></script>
+  </body>
+</html>

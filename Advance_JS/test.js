@@ -233,7 +233,8 @@ document.getElementById("animBtn").onclick = () => {
    
   }
  
-} */ const ball = document.getElementById("ball");
+} */
+const ball = document.getElementById("ball");
 
 // console.log(ball.offsetHeight);
 

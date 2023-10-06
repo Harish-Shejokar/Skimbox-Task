@@ -31,7 +31,6 @@ allClear.onclick = function () {
 };
 
 divide.onclick = () => {
-  const divideSign = "/";
   actualValue = input.value + "/";
   input.value += "÷";
 };
@@ -95,6 +94,7 @@ dot.onclick = () => {
   actualValue += ".";
   input.value += ".";
 };
+
 percent.onclick = () => {
   // console.log(input.value / 100 )
   actualValue += "/100*";
@@ -108,7 +108,8 @@ equalTo.onclick = () => {
       input.value = "";
     } else {
       console.log(input.value, actualValue);
-      let ans = Function("return " + actualValue)();
+      let ans = eval(actualValue);
+      // let ans = Function("return " + actualValue)();
       input.value = ans;
     }
   } catch (error) {
@@ -116,3 +117,50 @@ equalTo.onclick = () => {
     input.value = "Error";
   }
 };
+
+
+
+
+
+
+
+
+
+/* document.querySelectorAll(".btn").forEach((key) => {
+  // console.log(key);
+  key.addEventListener("click", () => {
+    console.log(key.innerHTML);
+
+    if (key.innerHTML === "=") {
+      try {
+        if (actualValue === "") {
+          input.value = "";
+        } else {
+          // console.log(input.value, actualValue);
+          let ans = eval(actualValue);
+          // let ans = Function("return " + actualValue)();
+          input.value = ans;
+        }
+      } catch (error) {
+        console.log("Error", error);
+        input.value = "Error";
+      }
+    } else if (key.innerHTML === "÷") {
+      actualValue = input.value + "/";
+      input.value += "÷";
+    } else if (key.innerHTML === "×") {
+      actualValue += "*";
+      input.value += "×";
+    } else if (key.innerHTML === "C") {
+      actualValue = "";
+      input.value = "";
+    } else if (input.innerHTML === "%") {
+       actualValue += "/100*";
+       input.value += "%";
+    } else {
+      console.log(key.innerHTML);
+      actualValue += key.innerHTML;
+      input.value += key.innerHTML;
+    }
+  });
+}); */

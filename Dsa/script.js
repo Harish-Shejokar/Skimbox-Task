@@ -367,12 +367,12 @@ class binaryTree {
   
   traversal(root, value) {
     
-    // if (root === null || root.value === value) return root;
-    // else if (value < root.value) {
-    //   this.traversal(root.left,value);
-    // } else {
-    //   this.traversal(root.right,value);
-    // }
+    if (root === null || root.value === value) return root;
+    else if (value < root.value) {
+      this.traversal(root.left,value);
+    } else {
+      this.traversal(root.right,value);
+    }
 
   }
 }

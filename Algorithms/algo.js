@@ -30,9 +30,7 @@ function selectionSort() {
 }
 // selectionSort();
 
-
-
-function InsertionSort(){
+function InsertionSort() {
   for (let i = 1; i < arr.length; i++) {
     let j = i - 1;
     let temp = arr[i];
@@ -45,20 +43,16 @@ function InsertionSort(){
 }
 // InsertionSort();
 
-
-
-
-function MergeSort(arr,start,end) {
-
+function MergeSort(arr, start, end) {
   if (start < end) {
     let mid = Math.floor((start + end) / 2);
     MergeSort(arr, start, mid);
     MergeSort(arr, mid + 1, end);
-    merge(arr,start,mid,end);
+    merge(arr, start, mid, end);
   }
 }
 
-function merge(arr, start,mid, end) {
+function merge(arr, start, mid, end) {
   let temp = [];
   let i = start;
   let j = mid + 1;
@@ -73,8 +67,8 @@ function merge(arr, start,mid, end) {
   }
 
   while (i <= mid) {
-      temp.push(arr[i]);
-      i++;
+    temp.push(arr[i]);
+    i++;
   }
 
   while (j <= end) {
@@ -85,11 +79,8 @@ function merge(arr, start,mid, end) {
   for (let i = start; i <= end; i++) {
     arr[i] = temp.shift();
   }
-
 }
 // MergeSort(arr,0,arr.length-1);
-
-
 
 // QUICK_SORT >>>>>>>>>>>
 
@@ -97,20 +88,20 @@ function QuickSort(arr, l, h) {
   if (l < h) {
     const pivotElem = findPivot(arr, l, h);
     QuickSort(arr, l, pivotElem);
-    QuickSort(arr, pivotElem+1, h);
+    QuickSort(arr, pivotElem + 1, h);
   }
-  
 }
 
-function findPivot(arr,l, h) {
+function findPivot(arr, l, h) {
   let pivotElem = arr[l];
-  let i = l, j = h;
+  let i = l,
+    j = h;
   while (i < j) {
     while (arr[i] <= pivotElem) i++;
 
     while (arr[j] > pivotElem) j--;
 
-   if(i < j) swap(arr, i, j);
+    if (i < j) swap(arr, i, j);
     // console.log(arr);
   }
   swap(arr, j, l);
@@ -124,7 +115,38 @@ function swap(arr, i, j) {
 }
 // QuickSort(arr, 0, arr.length - 1);
 
+// console.log("sort \n" , arr);
 
-console.log("sort \n" , arr);
+const getDigit = (num, i) => Math.floor(Math.abs(num) / Math.pow(10, i)) % 10;
 
+console.log(getDigit(10, 1));
 
+const digitCount = (n) => Math.floor(Math.log10(n)) + 1;
+
+// console.log(digitCount(49372));
+
+const maxDigitNum = (arr) => {
+  let num = 0;
+  for (let i = 0; i < arr.length; i++) {
+    num = Math.max(arr[i], num);
+  }
+  return num;
+};
+// console.log(maxDigitNum([222, 34, 54, 49372, 6, 43]));
+
+function radixSort(nums) {
+  let maxNum = digitCount(maxDigitNum(nums));
+  let digitBuckets = Array.from({ length: 10 }, () => []);
+
+  for (let k = 0; k < maxNum; k++) {
+    for (let i = 0; i < nums.length; i++) {
+      let digit = getDigit(nums[i], k);
+      digitBuckets[digit].push(nums[i]);
+    }
+    nums = [].concat(...digitBuckets);
+  }
+  // console.log(digitBuckets);
+  return nums
+}
+
+console.log(radixSort(arr));

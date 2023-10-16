@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 const TicTacToe = () => {
   const location = useLocation();
-  console.log(location.state);
+  // console.log(location);
   return (
     <div>
       <img

@@ -8,6 +8,7 @@ import Home from "./Components/Home";
 import { Route, Routes } from "react-router-dom";
 import TicTacToe from "./Components/TicTacToe";
 import Movies from "./Components/Movies/Movies";
+import StopWatch from "./Components/StopWatch";
 
 const App = () => {
   const Ctx = useContext(ListCtx);
@@ -36,7 +37,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/todo" element={<Form />} />
           <Route path="/ticTacToe" element={<TicTacToe />} />
-          <Route path="/movies" element={<Movies />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/stopwatch" element={<StopWatch />} />
           {/* <Login /> */}
 
         </Routes>

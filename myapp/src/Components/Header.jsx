@@ -24,6 +24,11 @@ const Header = () => {
           funZone
         </NavLink>
       </span>
+      <span className="text-2xl font-semibold">
+        <NavLink className="text-white" to="/stopwatch">
+          Stopwatch
+        </NavLink>
+      </span>
     </div>
   );
 };

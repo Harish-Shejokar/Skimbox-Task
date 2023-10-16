@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Animation</title>
+  </head>
+  <style>
+    div {
+      /* animation: 3s ; */
+      width: 100px;
+       height: 100px; 
+       background-color: cadetblue;
+       position: absolute;
+       animation-name: anime;
+       animation-duration: 4s;
+       animation-delay: 1s;
+       animation-fill-mode: forwards;
+       animation-iteration-count: 2;
+       /* animation-timing-function: ease-in; */
+       /* animation-timing-function: ease-out; */
+       /* animation-timing-function: ease-in-out; */
+       animation-timing-function: cubic-bezier(.07,.83,.91,-0.04);
+       animation-direction: alternate;
+
+    }
+
+     @keyframes anime {
+        0%{
+            left: 0;
+            top: 0;
+            background-color: lightblue;
+            rotate: 0;
+          }30%{
+           top: 0;
+           left: 50%;
+           background-color: red;
+           rotate: 360deg;
+          }50%{
+            left: 50%;
+            top: 50%;
+            background-color: cadetblue;
+            rotate: 0deg;
+          }80%{
+            left: 0;
+            top: 50%;
+            background-color: bisque;
+            rotate: 360deg;
+          }100%{
+            left: 0;
+            top: 0;
+            background-color: blueviolet;
+ 
+        }
+    }
+
+    body{
+      display: flex;
+      justify-content:center;
+      align-items: center;
+    }
+
+    h1{
+      color: white;
+      /* text-align: center; */
+      font-style: oblique;
+      position: relative;
+      
+    }
+
+    h1:hover::after{
+       animation-name: lineAnime;
+      animation-duration: 2s;
+    }
+
+    h1::after{
+      content: "";
+      position: absolute;
+      /* width: 16%; */
+      width: 0%;
+      height: 5px;
+      bottom: 0;
+      background-color: white;
+      left: 0;
+     
+    }
+
+    @keyframes lineAnime {
+      0%{
+        width: 0%;
+        left: 0;
+      }
+      50%{
+        width: 100%;
+        left: 0;
+      }
+      100%{
+        width: 0%;
+        left: 100%;
+      }
+    }
+
+
+    
+   
+  </style>
+  <body style="background-color: rgb(43, 44, 44)">
+    <div></div>
+
+    <h1>Css Animation</h1>
+  </body>
+</html>

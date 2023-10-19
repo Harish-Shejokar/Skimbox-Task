@@ -44,7 +44,7 @@ const StopWatch = () => {
     });
   };
   return (
-    <div className="bg-slate-200 lg:w-[40%] mx-auto mt-8 rounded-xl">
+    <div className="bg-slate-200 mx-8  lg:w-[40%] lg:mx-auto mt-8 rounded-xl">
       <h1 className="text-5xl font-semibold text-center">StopWatch</h1>
       <div className="flex justify-center my-2 text-8xl">
         <span>{hour < 10 && hour > 0 ? "0" + hour : hour}:</span>

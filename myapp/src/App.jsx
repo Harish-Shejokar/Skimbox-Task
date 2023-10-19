@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useImperativeHandle } from "react";
 import Header from "./Components/Header";
 import "./app.css";
 import Form from "./Components/Form";
@@ -9,9 +9,12 @@ import { Route, Routes } from "react-router-dom";
 import TicTacToe from "./Components/TicTacToe";
 import Movies from "./Components/Movies/Movies";
 import StopWatch from "./Components/StopWatch";
+import { useDispatch } from "react-redux";
+
 
 const App = () => {
-  const Ctx = useContext(ListCtx);
+  // const Ctx = useContext(ListCtx);
+  const dispatch = useDispatch();
   const fetchData = async () => {
     try {
       const data = await fetch(`https://imdb-top-100-movies.p.rapidapi.com/`);
@@ -25,9 +28,7 @@ const App = () => {
     }
   };
 
-  useEffect(() => {
-    // fetchData();
-  }, []);
+ 
 
   return (
      

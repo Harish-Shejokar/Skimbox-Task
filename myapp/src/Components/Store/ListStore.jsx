@@ -5,6 +5,7 @@ import {
   current,
 } from "@reduxjs/toolkit";
 import axios from "axios";
+import { useEffect } from "react";
 
 const listSlice = createSlice({
   name: "List",
@@ -43,10 +44,15 @@ const listSlice = createSlice({
   },
 });
 
+
+useEffect(() => {
+  
+},[])
+
 export const listAction = listSlice.actions;
 
 export const fetchOperation = createAsyncThunk("fetchOperation", async () => {
-  const response = await axios(
+  const response = await axios.get(
     `https://my-json-server.typicode.com/horizon-code-academy/fake-movies-api/movies`
   );
   return response.data;

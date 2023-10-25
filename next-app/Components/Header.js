@@ -3,9 +3,12 @@ import React from "react";
 
 const Header = () => {
   return (
-    <ul className="h-[100px] w-full bg-slate-400 flex justify-evenly items-center text-3xl">
+    <ul className="h-[100px] w-full bg-blue-600 flex justify-evenly items-center text-3xl">
       <li>
         <Link href="/" >Home</Link>
+      </li>
+      <li>
+        <Link href="/todo">Todo</Link>
       </li>
       <li>
         <Link href="/about">About</Link>

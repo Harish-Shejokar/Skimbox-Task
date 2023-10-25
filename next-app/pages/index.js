@@ -1,10 +1,14 @@
+import Head from "next/head";
 
 
 export default function Home({ posts }) {
-  console.log("reValidate")
+  // console.log("reValidate")
   return (
     <>
       <main className={`flex min-h-screen `}>
+        <Head>
+          <title>Home Page</title>
+        </Head>
         <h2 className='text-3xl'>Home page</h2>
         <ul className='mx-10 mt-10'>
           {posts.map(post => <li className='bg-yellow-300 my-2 text-2xl border-2 border-red-500 text-black' key={post.id}>{post.body}</li>)}
@@ -22,7 +26,7 @@ export async function getServerSideProps() {
   posts = posts.slice(0,20);
   return {
     props: {
-      posts,
+      posts:posts.slice(0,5),
     },
     
 

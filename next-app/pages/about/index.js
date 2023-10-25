@@ -1,15 +1,19 @@
-import React from 'react'
+import React from "react";
 import hello from "../api/hello";
+import Head from "next/head";
 
 const index = () => {
-  console.log(hello)
+  // console.log(hello)
   return (
     <div>
-      <h1 className='text-3xl'>About Page</h1>
+      <Head>
+        <title>About Page</title>
+      </Head>
+      <h1 className="text-3xl">About Page</h1>
     </div>
-  )
-}
-export default index
+  );
+};
+export default index;
 
 // export async function getStaticProps() {
 //   const api = hello();
@@ -17,4 +21,3 @@ export default index
 //   // const data = await res.json();
 //   // console.log(data);
 // }
-
